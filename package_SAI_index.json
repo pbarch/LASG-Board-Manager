@@ -19,8 +19,8 @@
           },
           "url": "https://github.com/pbarch/LASG-Board-Manager/blob/main/SAI-UR-1.0.0.zip?raw=true",
           "archiveFileName": "SAI-UR-1.0.0.zip",
-          "checksum": "SHA-256:A69B92AA85C8B9FC7FF103F59152E8B17D8FB14301E719AD5072FC0004C53FF3",
-          "size": "609078",
+          "checksum": "SHA-256:4929B9AA6486AD5BB92301F6281C2DA487747D549F30FC2AA9247864229FCE61",
+          "size": "610903",
           "boards": [
             {
               "name": "SAI-UR v1"
