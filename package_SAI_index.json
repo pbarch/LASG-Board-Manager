@@ -12,14 +12,14 @@
         {
           "name": "LASG SAI Boards",
           "architecture": "avr",
-          "version": "1.0.1",
+          "version": "1.0.2",
           "category": "Contributed",
           "help": {
             "online": ""
           },
-          "url": "https://github.com/pbarch/LASG-Board-Manager/blob/main/SAI-UR-1.0.1.zip?raw=true",
-          "archiveFileName": "SAI-UR-1.0.1.zip",
-          "checksum": "SHA-256:69EFBA1F380145CC7D90D1E0B7A3AEE047F1143EA2CA71B31892588C458010B8",
+          "url": "https://github.com/pbarch/LASG-Board-Manager/blob/main/SAI-UR-1.0.2.zip?raw=true",
+          "archiveFileName": "SAI-UR-1.0.2.zip",
+          "checksum": "SHA-256:20A094651C82511E9195F4D73C7F7787939FA5094A584C315E0CADBE3A9C1F0A",
           "size": "91977",
           "boards": [
             {
