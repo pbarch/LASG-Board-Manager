@@ -1,9 +1,15 @@
-# Platform text for SAI-UR (ATTiny85-based)
-# -----------------------------------------
-#
-# RG Mar 30 2021
+# Built from ATTinyCore by Dr. Azzy (Spence Konde) for the LASG boards.
+# RG Mar 2021
 
-name=LASG SAI-UR v1
+# For good instructions on how to construct this file, see https://arduino.github.io/arduino-cli/latest/platform-specification/#platformtxt
+
+# Arduino AVR Core and platform.
+# ------------------------------
+
+# For more info:
+# https://github.com/arduino/Arduino/wiki/Arduino-IDE-1.5---3rd-party-Hardware-specification
+
+name=LASG Boards
 version=1.0.0
 
 # AVR compile variables
@@ -112,7 +118,6 @@ tools.avrdude.path={runtime.tools.avrdude.path}
 tools.avrdude.cmd.path={path}/bin/avrdude
 tools.avrdude.config.path={runtime.platform.path}/avrdude.conf
 
-
 tools.avrdude.upload.params.verbose=-v
 tools.avrdude.upload.params.quiet=-q -q
 tools.avrdude.upload.pattern="{cmd.path}" "-C{config.path}" {upload.verbose} -p{build.mcu} -c{upload.protocol} -P{serial.port} -b{upload.speed} -D "-Uflash:w:{build.path}/{build.project_name}.hex:i"
@@ -148,7 +153,7 @@ tools.micronucleus.erase.params.quiet=
 tools.micronucleus.erase.pattern=
 
 # USB Default Flags
-# Default blank usb manufacturer will be filled it at compile time
+# Default blank usb manufacturer will be filled in at compile time
 # - from numeric vendor ID, set to Unknown otherwise
 build.usb_manufacturer=
 build.usb_flags=
