@@ -25,6 +25,10 @@ saiurv1.build.core=tiny
 saiurv1.build.board=AVR_ATTINYX5
 saiurv1.build.export_merged_output=false
 saiurv1.bootloader.extended_fuses=0xFF
+saiurv1.ltocflags=-flto -fno-fat-lto-objects
+saiurv1.ltoelfflags=-g -flto -fuse-linker-plugin
+saiurv1.ltocppflags=-flto
+saiurv1.ltoarcmd=gcc-
 
 # For the SAI-UR v1 we are setting the clock to 16MHz by default.
 
