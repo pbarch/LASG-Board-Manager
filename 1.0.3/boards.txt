@@ -1,0 +1,76 @@
+# Built from ATTinyCore by Dr. Azzy (Spence Konde) for the LASG boards.
+# RG Mar 2021
+
+# For good instructions on how to construct this file, see https://arduino.github.io/arduino-cli/latest/platform-specification/#boardstxt
+
+# this is where menu sections would go if we wanted to give the user any choice at all  :-)
+# leaving a few commented out to show how they work
+
+# menu.clock=Clock Source (Only set on bootload)
+# menu.eesave=Save EEPROM (only set on bootload)
+# menu.bod=B.O.D. Level (Only set on bootload)
+
+# Board definitions begin here...
+
+saiurv1.name=SAI-UR v1
+saiurv1.build.mcu=attiny85
+saiurv1.upload.maximum_size=8192
+saiurv1.upload.maximum_data_size=512
+saiurv1.upload.tool=avrdude
+saiurv1.bootloader.tool=avrdude
+saiurv1.bootloader.unlock_bits=0xFF
+saiurv1.bootloader.lock_bits=0xFF
+saiurv1.bootloader.file=empty/empty_all.hex
+saiurv1.build.core=tiny
+saiurv1.build.board=AVR_ATTINYX5
+saiurv1.build.export_merged_output=false
+saiurv1.bootloader.extended_fuses=0xFF
+
+# For the SAI-UR v1 we are setting the clock to 16MHz by default.
+
+saiurv1.bootloader.low_fuses=0xF1
+saiurv1.build.f_cpu=16000000L
+saiurv1.build.clocksource=6
+
+# The following lines were left as an example to go with the menu.* examples above
+
+# saiurv1.menu.clock.8internal=8 MHz (internal)
+# saiurv1.menu.clock.8internal.bootloader.low_fuses=0xE2
+# saiurv1.menu.clock.8internal.build.f_cpu=8000000L
+# saiurv1.menu.clock.8internal.build.clocksource=0
+# saiurv1.menu.clock.16pll=16 MHz (PLL)
+# saiurv1.menu.clock.16pll.bootloader.low_fuses=0xF1
+# saiurv1.menu.clock.16pll.build.f_cpu=16000000L
+# saiurv1.menu.clock.16pll.build.clocksource=6
+# saiurv1.menu.clock.20external=20 MHz (external)
+# saiurv1.menu.clock.20external.bootloader.low_fuses=0xFF
+# saiurv1.menu.clock.20external.build.f_cpu=20000000L
+# saiurv1.menu.clock.20external.build.clocksource=1
+
+# For the SAI-UR v1 we are setting the EESAVE fuse and BOD by default.
+
+saiurv1.bootloader.eesave_bit=0
+saiurv1.bootloader.bod_bits=101
+saiurv1.bootloader.high_fuses=0b1101{bootloader.eesave_bit}{bootloader.bod_bits}
+
+# Note: this could also just have been done in one line as below, but I left it to show how substitution works
+# saiurv1.bootloader.high_fuses=0b11010101
+
+# The following lines were left as an example to go with the menu.* examples above
+
+# saiurv1.menu.eesave.aenable=EEPROM retained
+# saiurv1.menu.eesave.aenable.bootloader.eesave_bit=0
+# saiurv1.menu.eesave.disable=EEPROM not retained
+# saiurv1.menu.eesave.disable.bootloader.eesave_bit=1
+# saiurv1.menu.bod.disable=B.O.D. Disabled (saves power)
+# saiurv1.menu.bod.disable.bootloader.bod_bits=111
+# saiurv1.menu.bod.1v8=B.O.D. Enabled (1.8v)
+# saiurv1.menu.bod.1v8.bootloader.bod_bits=110
+# saiurv1.menu.bod.2v7=B.O.D. Enabled (2.7v)
+# saiurv1.menu.bod.2v7.bootloader.bod_bits=101
+# saiurv1.menu.bod.4v3=B.O.D. Enabled (4.3v)
+# saiurv1.menu.bod.4v3.bootloader.bod_bits=100
+
+saiurv1.build.variant=tinyX5
+
+saiurv1.build.extra_flags=-DNEOPIXELPORT=PORTB
